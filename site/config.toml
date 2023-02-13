@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term"]
 [author]
   # name = "Iain Galloway"
   headline = "I build sofware and play music."
-  # image = "img/author.jpg"  # path relative to static directory
+  image = "img/author.png"
 
   links = [
     { email = "mailto:iain.galloway@gmail.com" },
