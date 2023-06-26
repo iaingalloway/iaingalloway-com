@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term"]
 
 [author]
   # name = "Iain Galloway"
-  headline = "I build sofware and play music."
+  headline = "I build sofware and make music."
   image = "img/author.png"
 
   links = [
