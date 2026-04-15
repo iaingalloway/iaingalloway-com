@@ -1,0 +1,14 @@
+{
+  "names": {
+    "iain": "99c197499ac2826f097dd44d8d91719ec094c1278d7576d34a277c39b9eb6696"
+  },
+  "relays": {
+    "99c197499ac2826f097dd44d8d91719ec094c1278d7576d34a277c39b9eb6696": [
+      "wss://relay.wellorder.net",
+      "wss://relay.primal.net",
+      "wss://relay.nostr.bg",
+      "wss://relay.damus.io",
+      "wss://nos.lol"
+    ]
+  }
+}

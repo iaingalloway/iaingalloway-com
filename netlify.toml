@@ -5,3 +5,8 @@
 
 [build.environment]
   HUGO_VERSION = "0.85.0"
+
+[[headers]]
+  for = "/.well-known/nostr.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
