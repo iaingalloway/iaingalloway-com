@@ -8,7 +8,7 @@ title = "Hi, I'm Iain Galloway"
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
 
-[author]
+[params.author]
   # name = "Iain Galloway"
   headline = "I build software and make music."
   image = "img/author.png"
