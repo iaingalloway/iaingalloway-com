@@ -19,6 +19,8 @@ disableKinds = ["taxonomy", "term"]
     { linkedin = "https://www.linkedin.com/in/iaingalloway/" },
     { instagram = "https://instagram.com/iain.galloway" },
     { discord = "https://discord.com/users/196378277651152896" },
+    { bluesky = "https://bsky.app/profile/iaingalloway.bsky.social" },
+    { mastodon = "https://mastodon.social/@iaingalloway.bsky.social@bsky.brid.gy" },
 
     # { link = "https://signetdevelopment.co.uk" },
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
@@ -34,7 +36,6 @@ disableKinds = ["taxonomy", "term"]
     # { keybase = "https://keybase.io/username" },
     # { kickstarter = "https://www.kickstarter.com/profile/username" },
     # { lastfm = "https://lastfm.com/user/username" },
-    # { mastodon = "https://mastodon.scot/@iaingalloway" },
     # { medium = "https://medium.com/username" },
     # { microsoft = "https://www.microsoft.com/" },
     # { patreon = "https://www.patreon.com/username" },
