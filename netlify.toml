@@ -4,7 +4,7 @@
   command = "hugo"
 
 [build.environment]
-  HUGO_VERSION = "0.85.0"
+  HUGO_VERSION = "0.153.0"
 
 [[headers]]
   for = "/.well-known/nostr.json"
