@@ -16,12 +16,12 @@ disableKinds = ["taxonomy", "term"]
   links = [
     { email = "mailto:iain.galloway@gmail.com" },
     { github = "https://github.com/iaingalloway" },
-    { linkedin = "https://www.linkedin.com/in/iaingalloway/" },
-    { instagram = "https://instagram.com/iain.galloway" },
-    { discord = "https://discord.com/users/196378277651152896" },
     { bluesky = "https://bsky.app/profile/iaingalloway.bsky.social" },
-    { mastodon = "https://mastodon.social/@iaingalloway.bsky.social@bsky.brid.gy" },
+    { linkedin = "https://www.linkedin.com/in/iaingalloway/" },
 
+    # { instagram = "https://instagram.com/iain.galloway" },
+    # { discord = "https://discord.com/users/196378277651152896" },
+    # { mastodon = "https://mastodon.social/@iaingalloway.bsky.social@bsky.brid.gy" },
     # { link = "https://signetdevelopment.co.uk" },
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
     # { apple = "https://www.apple.com" },
