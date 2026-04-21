@@ -1,0 +1,9 @@
+{
+  "name": "iaingalloway com devcontainer",
+  "image": "ghcr.io/iaingalloway/devcontainers/hugo:1.5.22",
+  "runArgs": [
+    "--name",
+    "iaingalloway-com-devcontainer",
+    "--network=host"
+  ]
+}

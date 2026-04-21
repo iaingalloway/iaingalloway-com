@@ -1,9 +1,18 @@
 # Iain Galloway
 
-My personal website.
+My personal website, built with Hugo.
 
-The site is built with Hugo. Serve it locally with:
+## Prerequisites
+
+- Docker
+- Visual Studio Code with the Dev Containers extension
+
+## Usage
+
+Clone this repository, open it in Visual Studio Code, and when prompted reopen it in the development container.
+
+Then serve the site locally with:
 
 ```bash
-bash ./serve-site.sh
+just
 ```
