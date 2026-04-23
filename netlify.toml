@@ -6,6 +6,18 @@
 [build.environment]
   HUGO_VERSION = "0.153.0"
 
+[[edge_functions]]
+  path = "/song"
+  function = "rickroll"
+
+[[edge_functions]]
+  path = "/spreadsheet"
+  function = "rickroll"
+
+[[edge_functions]]
+  path = "/blogpost"
+  function = "rickroll"
+
 [[headers]]
   for = "/*"
   [headers.values]
