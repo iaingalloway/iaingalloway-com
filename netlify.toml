@@ -1,10 +1,11 @@
 [build]
   base = "site"
   publish = "public"
-  command = "hugo"
+  command = "hugo --gc --minify"
 
 [build.environment]
   HUGO_VERSION = "0.153.0"
+  HUGO_ENV = "production"
 
 [[edge_functions]]
   path = "/song"
