@@ -8,8 +8,14 @@ title = "Hi, I'm Iain Galloway"
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
 
+[params]
+  description = "I build software and make music."
+  keywords = ["Iain Galloway", "software engineer", "musician"]
+  robots = "index, follow"
+  images = ["img/author.png"]
+
 [params.author]
-  # name = "Iain Galloway"
+  name = "Iain Galloway"
   headline = "I build software and make music."
   image = "img/author.png"
 
