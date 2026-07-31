@@ -1,0 +1,5 @@
+/* The base theme adds a background colour on hover, but doesn't set a high-contrast foreground */
+.prose :where(a):not(:where([class~=not-prose], [class~=not-prose] *)):hover {
+  color: var(--tw-prose-invert-bold, #ffffff);
+  text-decoration-color: currentColor;
+}

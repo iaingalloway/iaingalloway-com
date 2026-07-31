@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <article class="mt-10 flex flex-col items-center justify-center">
+    <nav class="place-self-start">
+      <a href="{{ "blog" | relURL }}" class="text-neutral-500">&larr; Blog</a>
+    </nav>
+    <header class="mb-8 max-w-3xl text-center">
+      <h1 class="mb-2 text-4xl font-extrabold text-neutral-800 dark:text-white">{{ .Title }}</h1>
+      <div class="text-sm text-neutral-500">{{ .Date.Format "2006-01-02" }}</div>
+    </header>
+    <section class="prose w-full max-w-3xl dark:prose-invert">
+      {{ .Content | emojify }}
+    </section>
+  </article>
+{{ end }}

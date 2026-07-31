@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <article class="mt-10 flex flex-col items-center justify-center">
+    <nav class="place-self-start">
+      <a href="{{ "" | relURL }}" class="text-neutral-500">&larr; {{ i18n "nav.home" }}</a>
+    </nav>
+    <header class="mb-8 text-center">
+      <h1 class="mb-2 text-4xl font-extrabold text-neutral-800 dark:text-white">{{ .Title }}</h1>
+      {{ with .Content }}
+        <section class="prose dark:prose-invert">{{ . }}</section>
+      {{ end }}
+    </header>
+    <section class="w-full max-w-3xl">
+      <ul class="space-y-6">
+        {{ range .Pages.ByDate.Reverse }}
+          <li class="border-b border-neutral-200 pb-5 dark:border-neutral-700">
+            <a href="{{ .RelPermalink }}" class="block">
+              <h2 class="text-xl font-extrabold text-neutral-800 dark:text-white">{{ .Title }}</h2>
+            </a>
+            <div class="mt-1 text-sm text-neutral-500">{{ .Date.Format "2006-01-02" }}</div>
+            {{ with .Params.description }}
+              <p class="mt-2 text-neutral-700 dark:text-neutral-300">{{ . }}</p>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  </article>
+{{ end }}
