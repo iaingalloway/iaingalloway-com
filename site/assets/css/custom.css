@@ -3,3 +3,8 @@
   color: var(--tw-prose-invert-bold, #ffffff);
   text-decoration-color: currentColor;
 }
+
+.prose {
+  max-width: 48rem;
+  width: 100%
+}
