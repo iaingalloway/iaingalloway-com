@@ -1,16 +1,16 @@
 {{ define "main" }}
-  <nav class="prose dark:prose-invert w-full max-w-3xl mt-2">
+  <nav>
     <a href="{{ "blog" | relURL }}">&larr; Blog</a>
   </nav>
-  <div id="outer" class="mt-10 flex flex-col items-center">
-    <div id="inner" class="prose dark:prose-invert w-full max-w-3xl">
-      <header>
-        <h1>{{ .Title }}</h1>
-        <span>{{ .Date.Format "2006-01-02" }}</span>
-      </header>
-      <section>
-        {{ .Content | emojify }}
-      </section>
-    </div>
-  </div>
+
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+      <span>{{ .Date.Format "2006-01-02" }}</span>
+    </header>
+
+    <section>
+      {{ .Content | emojify }}
+    </section>
+  </article>
 {{ end }}

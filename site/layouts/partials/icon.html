@@ -1,0 +1,5 @@
+{{- $iconName := . -}}
+{{- $iconPath := printf "static/img/icons/%s.svg" $iconName -}}
+{{- with readFile $iconPath -}}
+  {{- . | safeHTML -}}
+{{- end -}}

@@ -3,7 +3,6 @@ languageCode = "en"
 defaultContentLanguage = "en"
 
 title = "Hi, I'm Iain Galloway"
-# copyright = "Copy, _right?_ :thinking_face:"
 
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
@@ -14,20 +13,13 @@ disableKinds = ["taxonomy", "term"]
   robots = "index, follow"
   images = ["img/author.png"]
 
-[params.author]
-  name = "Iain Galloway"
-  headline = "I build software and make music."
-  image = "img/author.png"
+  author = "Iain Galloway"
+  tagline = "I build software and make music."
 
   links = [
-    { email = "mailto:iain.galloway@gmail.com" },
-    { github = "https://github.com/iaingalloway" },
+    { github = { href = "https://github.com/iaingalloway", icon = "github", text = "GitHub" } },
+    { email = { href = "mailto:iain.galloway@gmail.com", icon = "email", text = "Email" } },
     { blog = { href = "/blog", icon = "link", text = "Blog" } },
-    { bluesky = "https://bsky.app/profile/iaingalloway.bsky.social" },
-    { linkedin = "https://www.linkedin.com/in/iaingalloway/" }
+    { linkedin = { href = "https://www.linkedin.com/in/iaingalloway/", icon = "linkedin", text = "LinkedIn" } },
+    { bluesky = { href = "https://bsky.app/profile/iaingalloway.bsky.social", icon = "bluesky", text = "Bluesky" } }
   ]
-
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.153.0"

@@ -1,29 +1,23 @@
 {{ define "main" }}
-  <nav class="prose dark:prose-invert w-full max-w-3xl mt-2">
-    <a href="{{ "" | relURL }}">&larr; {{ i18n "nav.home" }}</a>
+  <nav>
+    <a href="{{ "" | relURL }}">&larr; Home</a>
   </nav>
-  <div id="outer" class="mt-10 flex flex-col items-center">
-    <div id="inner" class="prose dark:prose-invert w-full max-w-3xl">
+
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{ with .Content }}<section>{{ . }}</section>{{ end }}
+
+  {{ range .Pages.ByDate.Reverse }}
+    <article>
       <header>
-        <h1>{{ .Title }}</h1>
-        {{ with .Content }}
-          <section>{{ . }}</section>
-        {{ end }}
-      </header>
-      <section>
-        <p>In corporate software engineering positions for the first ten years of my career, it was normal for a new start to spend a week or more setting up their development environment. If you were lucky, you would have a machine image - or more likely a script - that would install all the dependencies for the software you were working on. More likely you would install the dependencies yourself following a half-maintained set of instructions on an internal wiki, and then spend a few days with your team trying to get your environment working correctly.</p>
-      </section>
-    </div>
-    {{ range .Pages.ByDate.Reverse }}
-      <article class="prose dark:prose-invert w-full max-w-3xl">
-        <a href="{{ .RelPermalink }}" class="block">
+        <a href="{{ .RelPermalink }}">
           <h2>{{ .Title }}</h2>
         </a>
-        <div>{{ .Date.Format "2006-01-02" }}</div>
-        {{ with .Params.description }}
-          <p>{{ . }}</p>
-        {{ end }}
-      </article>
-    {{ end }}
-  </div>
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+      </header>
+      {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+    </article>
+  {{ end }}
 {{ end }}

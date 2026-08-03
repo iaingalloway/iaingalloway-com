@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <article class="home">
+    <img src="/img/author.png" alt="Iain Galloway" width="150" height="150">
+    <header>
+      <h1>{{ .Site.Params.author }}</h1>
+      <h2>{{ .Site.Params.tagline }}</h2>
+    </header>
+
+    <nav>
+      {{ range .Site.Params.links }}
+        {{ $link := index . }}
+        {{ range $key, $value := $link }}
+          <a href="{{ $value.href }}" class="link link-{{ $key }}">
+            {{ partial "icon" $value.icon }}
+            <span>{{ $value.text }}</span>
+          </a>
+        {{ end }}
+      {{ end }}
+    </nav>
+  </article>
+{{ end }}

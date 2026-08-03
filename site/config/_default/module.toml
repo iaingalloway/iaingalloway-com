@@ -1,2 +1,2 @@
-[[imports]]
-path = "github.com/jpanther/lynx"
+# No external modules - using custom CSS and layouts
+
