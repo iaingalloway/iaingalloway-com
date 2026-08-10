@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Content Manager</title>
+    <link href="/admin/config.yaml" type="text/yaml" rel="cms-config-url">
+  </head>
+  <body>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.registerPreviewStyle('/css/main.css');
+
+      var BlogPreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+
+          return h('article', {},
+            h('header', {},
+              h('h1', {}, entry.getIn(['data', 'title'])),
+              h('span', {}, entry.getIn(['data', 'date']))
+            ),
+            h('section', {}, this.props.widgetFor('body'))
+          );
+        }
+      });
+
+      CMS.registerPreviewTemplate('blog', BlogPreview);
+    </script>
+  </body>
+</html>

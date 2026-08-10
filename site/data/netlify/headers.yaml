@@ -1,0 +1,57 @@
+csp:
+  directives:
+    - name: default-src
+      sources:
+        - "'self'"
+    - name: img-src
+      sources:
+        - "'self'"
+        - data:
+        - https:
+    - name: style-src
+      sources:
+        - "'self'"
+        - "'unsafe-inline'"
+        - https://fonts.googleapis.com
+    - name: font-src
+      sources:
+        - "'self'"
+        - data:
+        - https://fonts.gstatic.com
+    - name: script-src
+      sources:
+        - "'self'"
+        - "'unsafe-inline'"
+        - https://*.cloudflare.com
+      admin_sources:
+        - https://unpkg.com
+        - "'unsafe-eval'"
+    - name: connect-src
+      sources:
+        - "'self'"
+        - https://*.cloudflare.com
+      admin_sources:
+        - https://api.github.com
+        - https://github.com
+        - https://unpkg.com
+    - name: base-uri
+      sources:
+        - "'self'"
+    - name: form-action
+      sources:
+        - "'self'"
+      admin_sources:
+        - https://github.com
+    - name: frame-ancestors
+      sources:
+        - "'none'"
+
+headers:
+  - path: "/*"
+    values:
+      Referrer-Policy: strict-origin-when-cross-origin
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY
+  - path: /.well-known/nostr.json
+    values:
+      Access-Control-Allow-Origin: "*"

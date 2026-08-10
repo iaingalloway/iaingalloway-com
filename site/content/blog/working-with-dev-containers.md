@@ -2,6 +2,7 @@
 title: Working with dev containers
 date: 2026-07-31
 description: I'm using dev containers to make my development environments more portable and reusable.
+content-type: post
 ---
 
 In corporate software engineering positions for the first ten years of my career, it was normal for a new start to spend a week or more setting up their development environment. If you were lucky, you would have a machine image - or more likely a script - that would install all the dependencies for the software you were working on. More likely you would install the dependencies yourself following a half-maintained set of instructions on an internal wiki, and then spend a few days with your team trying to get your environment working correctly.

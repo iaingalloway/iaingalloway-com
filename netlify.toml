@@ -18,16 +18,3 @@
 [[edge_functions]]
   path = "/blogpost"
   function = "rickroll"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://*.cloudflare.com; connect-src 'self' https://*.cloudflare.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-
-[[headers]]
-  for = "/.well-known/nostr.json"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"

@@ -23,3 +23,16 @@ disableKinds = ["taxonomy", "term"]
     { linkedin = { href = "https://www.linkedin.com/in/iaingalloway/", icon = "linkedin", text = "LinkedIn" } },
     { bluesky = { href = "https://bsky.app/profile/iaingalloway.bsky.social", icon = "bluesky", text = "Bluesky" } }
   ]
+
+[mediaTypes."text/netlify-headers"]
+  suffixes = [""]
+
+[outputFormats.headers]
+  baseName = "_headers"
+  isPlainText = true
+  mediaType = "text/netlify-headers"
+  notAlternative = true
+  root = true
+
+[outputs]
+  home = ["html", "headers"]

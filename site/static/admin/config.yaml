@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: iaingalloway/iaingalloway-com
+  branch: main
+  squash_merges: true
+publish_mode: editorial_workflow
+site_url: https://iaingalloway.com
+media_folder: site/assets/images
+
+collections:
+  - name: blog
+    label: Blog post
+    folder: site/content/blog
+    filter:
+      field: content-type
+      value: post
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Post date
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: Description
+        name: description
+        widget: text
+        required: false
+      - label: Content type
+        name: content-type
+        widget: hidden
+        default: post
+      - label: Body
+        name: body
+        widget: markdown
