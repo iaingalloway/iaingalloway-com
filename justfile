@@ -1,4 +1,9 @@
-default: serve
+default: check
+
+check: build
+
+build:
+    cd site && HUGO_ENV=production hugo --gc --minify --panicOnWarning --printPathWarnings -b https://iaingalloway.com
 
 serve:
     cd site && hugo server -D
@@ -8,3 +13,6 @@ publish:
 
 preview:
     cd site && HUGO_ENV=production hugo --gc --minify -D
+
+clean:
+    rm -rf -- site/public

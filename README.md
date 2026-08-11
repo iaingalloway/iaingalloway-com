@@ -14,5 +14,5 @@ Clone this repository, open it in Visual Studio Code, and when prompted reopen i
 Then serve the site locally with:
 
 ```bash
-just
+just serve
 ```
