@@ -31,12 +31,6 @@ html {
   --accent: #9333ea;
   --accent-dark: #c084fc;
 
-  --brand-github-gradient: linear-gradient(110deg, #10113a 0%, #10113a 33%, #5682b0 100%);
-  --brand-email-gradient: linear-gradient(110deg, #ff6b35 0%, #ff6b35 33%, #f0bb7e 100%);
-  --brand-blog-gradient: linear-gradient(110deg, #9333ea 0%, #9333ea 33%, #ac70e4 100%);
-  --brand-linkedin-gradient: linear-gradient(110deg, #0a66c2 0%, #0a66c2 33%, #56a5b9 100%);
-  --brand-bluesky-gradient: linear-gradient(110deg, #1d9bf0 0%, #1d9bf0 33%, #7cc3e9 100%);
-
   --text-button: #ffffff;
 }
 
@@ -237,26 +231,6 @@ article.home {
   article.home a:hover {
     text-decoration: none;
     opacity: 0.8;
-  }
-
-  article.home a.link-github {
-    background: var(--brand-github-gradient);
-  }
-
-  article.home a.link-email {
-    background: var(--brand-email-gradient);
-  }
-
-  article.home a.link-blog {
-    background: var(--brand-blog-gradient);
-  }
-
-  article.home a.link-linkedin {
-    background: var(--brand-linkedin-gradient);
-  }
-
-  article.home a.link-bluesky {
-    background: var(--brand-bluesky-gradient);
   }
 
   article.home a svg {

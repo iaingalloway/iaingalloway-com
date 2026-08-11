@@ -11,18 +11,6 @@ disableKinds = ["taxonomy", "term"]
   description = "I build software and make music."
   keywords = ["Iain Galloway", "software engineer", "musician"]
   robots = "index, follow"
-  images = ["img/author.png"]
-
-  author = "Iain Galloway"
-  tagline = "I build software and make music."
-
-  links = [
-    { github = { href = "https://github.com/iaingalloway", icon = "github", text = "GitHub" } },
-    { email = { href = "mailto:iain.galloway@gmail.com", icon = "email", text = "Email" } },
-    { blog = { href = "/blog", icon = "link", text = "Blog" } },
-    { linkedin = { href = "https://www.linkedin.com/in/iaingalloway/", icon = "linkedin", text = "LinkedIn" } },
-    { bluesky = { href = "https://bsky.app/profile/iaingalloway.bsky.social", icon = "bluesky", text = "Bluesky" } }
-  ]
 
 [mediaTypes."text/netlify-headers"]
   suffixes = [""]
