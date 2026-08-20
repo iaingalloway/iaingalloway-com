@@ -1,5 +1,5 @@
 baseURL = "/"
-languageCode = "en"
+locale = "en"
 defaultContentLanguage = "en"
 
 title = "Hi, I'm Iain Galloway"

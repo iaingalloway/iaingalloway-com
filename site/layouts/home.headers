@@ -1,13 +1,13 @@
-{{- $global := index (where site.Data.netlify.headers.headers "path" "/*") 0 -}}
-{{- $wellKnown := index (where site.Data.netlify.headers.headers "path" "/.well-known/nostr.json") 0 -}}
+{{- $global := index (where hugo.Data.netlify.headers.headers "path" "/*") 0 -}}
+{{- $wellKnown := index (where hugo.Data.netlify.headers.headers "path" "/.well-known/nostr.json") 0 -}}
 /*
-	Content-Security-Policy: {{ range $index, $directive := site.Data.netlify.headers.csp.directives }}{{ if $index }}; {{ end }}{{ $directive.name }} {{ delimit $directive.sources " " }}{{ end }}
+	Content-Security-Policy: {{ range $index, $directive := hugo.Data.netlify.headers.csp.directives }}{{ if $index }}; {{ end }}{{ $directive.name }} {{ delimit $directive.sources " " }}{{ end }}
 {{- range $name, $value := $global.values }}
 	{{ $name }}: {{ $value }}
 {{- end }}
 
 /admin/*
-	Content-Security-Policy: {{ range $index, $directive := site.Data.netlify.headers.csp.directives }}{{ if $index }}; {{ end }}{{ $directive.name }} {{ delimit $directive.sources " " }}{{ with $directive.admin_sources }} {{ delimit . " " }}{{ end }}{{ end }}
+	Content-Security-Policy: {{ range $index, $directive := hugo.Data.netlify.headers.csp.directives }}{{ if $index }}; {{ end }}{{ $directive.name }} {{ delimit $directive.sources " " }}{{ with $directive.admin_sources }} {{ delimit . " " }}{{ end }}{{ end }}
 
 {{ $wellKnown.path }}
 {{- range $name, $value := $wellKnown.values }}

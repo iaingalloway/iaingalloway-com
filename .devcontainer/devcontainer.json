@@ -1,6 +1,6 @@
-{
+ {
   "name": "iaingalloway com devcontainer",
-  "image": "ghcr.io/iaingalloway/devcontainers/hugo:1.5.22",
+  "image": "ghcr.io/iaingalloway/devcontainers/hugo:1.5.57",
   "runArgs": [
     "--name",
     "iaingalloway-com-devcontainer",
