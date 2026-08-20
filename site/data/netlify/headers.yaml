@@ -20,6 +20,8 @@ csp:
         - "'self'"
         - "data:"
         - https://fonts.gstatic.com
+      admin_sources:
+        - https://cdn.jsdelivr.net
     - name: script-src
       sources:
         - "'self'"
@@ -27,7 +29,6 @@ csp:
         - https://*.cloudflare.com
       admin_sources:
         - https://unpkg.com
-        - "'unsafe-eval'"
     - name: connect-src
       sources:
         - "'self'"
@@ -38,6 +39,18 @@ csp:
         - https://api.github.com
         - https://github.com
         - https://unpkg.com
+    - name: media-src
+      sources: []
+      admin_sources:
+        - "blob:"
+    - name: frame-src
+      sources: []
+      admin_sources:
+        - "blob:"
+    - name: manifest-src
+      sources: []
+      admin_sources:
+        - "blob:"
     - name: base-uri
       sources:
         - "'self'"
