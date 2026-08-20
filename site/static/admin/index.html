@@ -12,6 +12,82 @@
     <script>
       CMS.registerPreviewStyle('/css/main.css');
 
+      function cssTextToStyleObject(cssText) {
+        return (cssText || '').split(';').reduce(function(style, declaration) {
+          var parts = declaration.split(':');
+          var property = parts.shift();
+          var value = parts.join(':');
+
+          if (!property || !value) {
+            return style;
+          }
+
+          property = property.trim().replace(/-([a-z])/g, function(match, letter) {
+            return letter.toUpperCase();
+          });
+
+          style[property] = value.trim();
+
+          return style;
+        }, {});
+      }
+
+      function iconPreview(iconName) {
+        if (!iconName) {
+          return null;
+        }
+
+        return h('img', {
+          src: '/img/icons/' + iconName + '.svg',
+          alt: '',
+          'aria-hidden': 'true',
+          width: 20,
+          height: 20,
+          style: {
+            display: 'inline',
+            width: '1.25rem',
+            height: '1.25rem',
+            borderRadius: 0,
+            margin: '0 0.25em 0 0',
+            verticalAlign: 'middle',
+            filter: 'brightness(0) invert(1)'
+          }
+        });
+      }
+
+      var HomepagePreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          var links = entry.getIn(['data', 'links']) || [];
+
+          if (typeof links.toJS === 'function') {
+            links = links.toJS();
+          }
+
+          return h('article', { className: 'home' },
+            h('img', {
+              src: entry.getIn(['data', 'image']),
+              alt: entry.getIn(['data', 'image_alt']),
+              width: 150,
+              height: 150
+            }),
+            h('header', {},
+              h('h1', {}, entry.getIn(['data', 'author'])),
+              h('h2', {}, entry.getIn(['data', 'tagline']))
+            ),
+            h('section', {}, this.props.widgetFor('body')),
+            h('nav', {}, links.map(function(link, index) {
+              return h('a', {
+                key: index,
+                href: link.href,
+                className: 'link',
+                style: cssTextToStyleObject(link.style)
+              }, iconPreview(link.icon), h('span', {}, link.text));
+            }))
+          );
+        }
+      });
+
       var BlogPreview = createClass({
         render: function() {
           var entry = this.props.entry;
@@ -26,6 +102,7 @@
         }
       });
 
+      CMS.registerPreviewTemplate('homepage', HomepagePreview);
       CMS.registerPreviewTemplate('blog', BlogPreview);
     </script>
   </body>
