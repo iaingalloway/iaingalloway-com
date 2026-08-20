@@ -7,7 +7,7 @@ export default async (request: Request, _context: Context): Promise<Response> =>
   const userAgent = request.headers.get("user-agent") ?? "";
 
   if (BOT_UA_PATTERN.test(userAgent)) {
-    return new Response(null, { status: 204 });
+    return fetch(new URL("/", request.url));
   }
 
   return Response.redirect(REDIRECT_URL, 302);
