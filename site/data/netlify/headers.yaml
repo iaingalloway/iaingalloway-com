@@ -6,8 +6,10 @@ csp:
     - name: img-src
       sources:
         - "'self'"
-        - data:
-        - https:
+        - "data:"
+        - "https:"
+      admin_sources:
+        - "blob:"
     - name: style-src
       sources:
         - "'self'"
@@ -16,7 +18,7 @@ csp:
     - name: font-src
       sources:
         - "'self'"
-        - data:
+        - "data:"
         - https://fonts.gstatic.com
     - name: script-src
       sources:
@@ -31,6 +33,8 @@ csp:
         - "'self'"
         - https://*.cloudflare.com
       admin_sources:
+        - "blob:"
+        - "data:"
         - https://api.github.com
         - https://github.com
         - https://unpkg.com

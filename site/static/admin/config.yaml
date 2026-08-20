@@ -73,8 +73,7 @@ collections:
         name: description
         widget: text
         required: false
-      - label: Content type
-        name: content-type
+      - name: content-type
         widget: hidden
         default: post
       - label: Body
