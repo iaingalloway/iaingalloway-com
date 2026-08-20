@@ -4,6 +4,7 @@ backend:
   name: github
   repo: iaingalloway/iaingalloway-com
   branch: main
+  site_domain: iaingalloway.com
   squash_merges: true
 publish_mode: editorial_workflow
 site_url: https://iaingalloway.com
