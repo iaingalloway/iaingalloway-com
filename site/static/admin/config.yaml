@@ -27,12 +27,6 @@ collections:
           - label: Tagline
             name: tagline
             widget: string
-          - label: Profile image
-            name: image
-            widget: string
-          - label: Profile image alt text
-            name: image_alt
-            widget: string
           - label: Links
             name: links
             widget: list

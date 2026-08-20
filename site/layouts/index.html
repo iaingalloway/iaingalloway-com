@@ -2,7 +2,7 @@
 
 {{ define "main" }}
   <article class="home">
-    <img src="{{ .Params.image }}" alt="{{ .Params.image_alt }}" width="150" height="150">
+    <img src="{{ "/img/author.png" | relURL }}" alt="Iain Galloway" width="150" height="150">
     <header>
       <h1>{{ .Params.author }}</h1>
       <h2>{{ .Params.tagline }}</h2>

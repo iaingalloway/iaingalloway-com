@@ -2,8 +2,6 @@
 title: Hi, I'm Iain Galloway
 author: Iain Galloway
 tagline: I build software and make music.
-image: /img/author.png
-image_alt: Iain Galloway
 links:
   - text: GitHub
     href: https://github.com/iaingalloway
