@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}</title>
+  <meta property="og:type" content="{{ block "og-type" . }}website{{ end }}">
+  <meta property="og:title" content="{{ block "og-title" . }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ block "og-description" . }}{{ .Description }}{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
   {{ $css := resources.Get "css/main.css" }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   {{ if .IsHome }}<link rel="canonical" href="{{ .Site.BaseURL }}">{{ else }}<link rel="canonical" href="{{ .Permalink }}">{{ end }}
