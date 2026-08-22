@@ -1,0 +1,36 @@
+collections:
+  - name: homepage
+    label: Homepage
+    files:
+      - name: homepage
+        label: Homepage
+        file: site/content/_index.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Author
+            name: author
+            widget: string
+          - label: Tagline
+            name: tagline
+            widget: string
+          - label: Links
+            name: links
+            widget: list
+            fields:
+              - label: Text
+                name: text
+                widget: string
+              - label: URL
+                name: href
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Style
+                name: style
+                widget: string
+          - label: Body
+            name: body
+            widget: markdown
