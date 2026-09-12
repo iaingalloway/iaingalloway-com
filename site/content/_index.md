@@ -8,7 +8,7 @@ links:
     icon: github
     style: "background: linear-gradient(110deg, #10113a 0%, #10113a 33%, #5682b0 100%);"
   - text: Email
-    href: mailto:iain.galloway@gmail.com
+    href: mailto:hello@iaingalloway.com
     icon: email
     style: "background: linear-gradient(110deg, #ff6b35 0%, #ff6b35 33%, #f0bb7e 100%);"
   - text: Blog
