@@ -83,6 +83,24 @@ p {
   margin-bottom: 1rem;
 }
 
+blockquote {
+  border-left: 0.25rem solid var(--accent);
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+}
+
+  blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    blockquote {
+      border-color: var(--accent-dark);
+      color: var(--text-secondary-dark);
+    }
+  }
+
 em {
   font-style: italic;
 }
@@ -116,6 +134,19 @@ pre {
   font-size: 0.875rem;
   line-height: 1.5;
 }
+
+pre.mermaid {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+  pre.mermaid svg {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+  }
 
 code {
   background-color: var(--bg-code);

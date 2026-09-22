@@ -17,6 +17,13 @@
   <main>
     {{ block "main" . }}{{ end }}
   </main>
+  {{ if .Store.Get "hasMermaid" }}
+    {{ $mermaid := resources.Get "js/mermaid.min.js" | fingerprint }}
+    <script src="{{ $mermaid.RelPermalink }}"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  {{ end }}
   <footer>
     <p>© {{ now.Year }}</p>
     <p>Powered by <a href="https://gohugo.io/">Hugo</a></p>
