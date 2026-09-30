@@ -7,6 +7,11 @@
   HUGO_VERSION = "0.165.0"
   HUGO_ENV = "production"
 
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.svg"
+  status = 301
+
 [[edge_functions]]
   path = "/song"
   function = "rickroll"

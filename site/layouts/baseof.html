@@ -11,6 +11,7 @@
   <meta property="og:image" content="{{ "/img/author.png" | absURL }}">
   {{ $css := resources.Get "css/main.css" }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   {{ if .IsHome }}<link rel="canonical" href="{{ .Site.BaseURL }}">{{ else }}<link rel="canonical" href="{{ .Permalink }}">{{ end }}
 </head>
 <body>
