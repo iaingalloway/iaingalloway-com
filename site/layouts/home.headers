@@ -7,7 +7,7 @@
 {{- end }}
 
 /admin/*
-	Content-Security-Policy: {{ range $index, $directive := hugo.Data.netlify.headers.csp.directives }}{{ if $index }}; {{ end }}{{ $directive.name }} {{ delimit $directive.sources " " }}{{ with $directive.admin_sources }} {{ delimit . " " }}{{ end }}{{ end }}
+	Content-Security-Policy: {{ range $index, $directive := hugo.Data.netlify.headers.csp.directives }}{{ if $index }}; {{ end }}{{ $directive.name }} {{ with $directive.admin_sources }}{{ delimit . " " }}{{ else }}{{ delimit $directive.sources " " }}{{ end }}{{ end }}
 
 {{ $wellKnown.path }}
 {{- range $name, $value := $wellKnown.values }}
